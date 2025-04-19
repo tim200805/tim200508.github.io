@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Développeurs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>L'équipe Aéromovie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="developpeurs.html">Développeurs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Qui sommes-nous ?</h2>
+            <div class="dev-profiles">
+                <div class="profile">
+                    <img src="images/tim.jpg" alt="Timothé">
+                    <h3>Timothé Luzzatto</h3>
+                    <p>Passionné d'aéronautique et de cinéma. Responsable HTML et JavaScript.</p>
+                </div>
+                <div class="profile">
+                    <img src="images/tom.jpg" alt="Tom">
+                    <h3>Tom Pitman</h3>
+                    <p>Expert en design et expérience utilisateur. Responsable CSS et JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Aéromovie - Tom & Timothé</p>
+        <p id="visit-count">Visites : </p>
+    </footer>
+</body>
+</html>

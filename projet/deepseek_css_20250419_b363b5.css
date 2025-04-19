@@ -1,0 +1,56 @@
+/* [...] (Styles existants conservés) */
+
+/* Nouveaux styles */
+body.cinema {
+    --primary-color: #8B0000;
+    --secondary-color: #B22222;
+    background-image: url('images/fond-cinema.jpg');
+}
+
+body.aviation {
+    --primary-color: #004080;
+    --secondary-color: #0066cc;
+    background-image: url('images/fond-aviation.jpg');
+}
+
+.quiz-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.question {
+    margin-bottom: 1.5rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.slider img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.dev-profiles {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile {
+    text-align: center;
+    max-width: 250px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}

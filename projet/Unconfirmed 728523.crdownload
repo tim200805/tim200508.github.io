@@ -1,0 +1,57 @@
+// [...] (Fonctions existantes conservées)
+
+// Changement de thème
+function changeTheme(theme) {
+    document.body.className = theme;
+    localStorage.setItem('theme', theme);
+}
+
+// Diaporama
+const images = ['concorde.jpg', 'a380.jpg', 'boeing747.jpg', 'spitfire.jpg'];
+let currentImage = 0;
+
+function nextImage() {
+    currentImage = (currentImage + 1) % images.length;
+    updateSlider();
+}
+
+function prevImage() {
+    currentImage = (currentImage - 1 + images.length) % images.length;
+    updateSlider();
+}
+
+function updateSlider() {
+    document.getElementById('slider-img').src = `images/${images[currentImage]}`;
+}
+
+// Validation Quiz
+function validateQuiz() {
+    let score = 0;
+    
+    // Question 1
+    if (document.querySelector('input[name="q1"]:checked')?.value === 'B') score++;
+    
+    // Question 2
+    if (document.getElementById('q2').value === '1903') score++;
+    
+    // Question 3
+    if (document.getElementById('q3').value === 'Concorde') score++;
+    
+    document.getElementById('quiz-result').textContent = `Score : ${score}/3`;
+}
+
+// Compteur de visites (fonctionnalité libre)
+function updateVisitCount() {
+    let visits = localStorage.getItem('visits') || 0;
+    visits = parseInt(visits) + 1;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visit-count').textContent += visits;
+}
+
+// Appliquer le thème sauvegardé
+window.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.body.className = savedTheme;
+    
+    updateVisitCount();
+});

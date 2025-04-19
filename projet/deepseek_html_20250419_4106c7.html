@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Aéronautique & Cinéma</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Quiz Aéromovie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cinema.html">Cinéma</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="developpeurs.html">Développeurs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Quiz Cinéma & Aviation</h2>
+            
+            <div class="quiz-container">
+                <div class="question">
+                    <p>1. Quel film met en scène des pilotes de chasse américains formés à Top Gun ?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="A"> A) Sully</label>
+                        <label><input type="radio" name="q1" value="B"> B) Top Gun</label>
+                        <label><input type="radio" name="q1" value="C"> C) Airport '79</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. En quelle année les frères Wright ont-ils réalisé leur premier vol ?</p>
+                    <input type="number" id="q2" min="1900" max="2000">
+                </div>
+
+                <div class="question">
+                    <p>3. Quel avion supersonique franco-britannique est célèbre au cinéma ?</p>
+                    <select id="q3">
+                        <option value="">--Choisissez--</option>
+                        <option value="A380">A380</option>
+                        <option value="Concorde">Concorde</option>
+                        <option value="Boeing 747">Boeing 747</option>
+                    </select>
+                </div>
+
+                <button onclick="validateQuiz()">Valider</button>
+                <p id="quiz-result"></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Diaporama d'avions célèbres</h2>
+            <div class="slider">
+                <button onclick="prevImage()">← Précédent</button>
+                <img id="slider-img" src="images/concorde.jpg" alt="Avion">
+                <button onclick="nextImage()">Suivant →</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Aéromovie - Tom & Timothé</p>
+    </footer>
+</body>
+</html>
